@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.tedu.mapper.PersonalCenterMapper">
+    <!--个人基本信息查询-->
+    <select id="personalInformation" resultType="cn.tedu.domain.Student">
+        select * from student where studentNumber=#{account};
+    </select>
+
+    <!--更新个人联系方式-->
+    <update id="updateContactWay">
+        update student
+        <set>
+            <if test="phoneNumber!=null">phoneNumber=#{phoneNumber},</if>
+            <if test="secondPhoneNumber!=null">secondPhoneNumber=#{secondPhoneNumber},</if>
+            <if test="QQ!=null">QQ=#{QQ},</if>
+            <if test="email!=null">email=#{email},</if>
+        </set>
+        where studentNUmber=#{account}
+    </update>
+
+    <select id="classInformation" resultType="cn.tedu.domain.ClassAndGrade">
+        SELECT * FROM classTable WHERE className=(SELECT classId FROM student WHERE studentNumber=#{studentNumber})
+    </select>
+</mapper>
