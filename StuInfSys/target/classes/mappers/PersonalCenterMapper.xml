@@ -20,7 +20,13 @@
         where studentNUmber=#{account}
     </update>
 
+    <!--班级信息-->
     <select id="classInformation" resultType="cn.tedu.domain.ClassAndGrade">
         SELECT * FROM classTable WHERE className=(SELECT classId FROM student WHERE studentNumber=#{studentNumber})
     </select>
+
+    <!--提交建议-->
+    <insert id="submitSuggest">
+        insert into suggest values (#{className},#{suggest})
+    </insert>
 </mapper>

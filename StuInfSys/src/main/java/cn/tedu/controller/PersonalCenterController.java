@@ -37,8 +37,23 @@ public class PersonalCenterController {
         return personalCenterServer.updateContactWay(map);
     }
 
+    /**
+     * 班级信息
+     * @param map
+     * @return
+     */
     @PostMapping("/student/classInformation")
     public ApiResponse classInformation(@RequestBody Map map){
         return personalCenterServer.classInformation(map);
+    }
+
+    /**
+     * 提交班级建议
+     * @param map
+     * @return
+     */
+    @PostMapping("/student/submitSuggest")
+    protected ApiResponse submitSuggest(@RequestBody Map map){
+        return personalCenterServer.submitSuggest(map);
     }
 }

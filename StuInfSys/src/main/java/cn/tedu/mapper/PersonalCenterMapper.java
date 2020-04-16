@@ -12,4 +12,6 @@ public interface PersonalCenterMapper {
     public void updateContactWay(Map map);
 
     public ClassAndGrade classInformation(Map map);
+
+    public void submitSuggest(Map map);
 }
