@@ -28,13 +28,13 @@
       <tr>
         <td rowspan="2" align="right">意见或建议：</td>
         <td colspan="3">
-          <textarea name="problemContent" id="problemContent" cols="120" rows="8" class="input_2">{{this.tableData.suggest}}</textarea>
+          <el-input type="textarea" :rows="8" placeholder="请输入内容" v-model="tableData.suggest"></el-input>
         </td>
       </tr>
 
       <tr>
         <td colspan="3" align="center" valign="middle">
-          <input type="button" name="button2" id="button2" value="点击提交" class="input2" onclick="onSaveProblem()" />
+          <el-button type="primary" @click="onSaveProblem">点击提交</el-button>
         </td>
       </tr>
     </table>
@@ -63,6 +63,9 @@
       },
 
       methods:{
+        /***
+         * 初始化及渲染页面
+         */
         classInformation(){
           let that=this;
           let studentNumber=this.$cookie.get('account');
@@ -76,6 +79,23 @@
           })
         },
 
+        /****
+         * 提交建议
+         */
+        onSaveProblem(){
+          let className=this.tableData.className;
+          let suggest=this.tableData.suggest;
+          console.log("建议",className,suggest)
+          this.$axios.post("http://localhost:8889/system/student/submitSuggest",{
+            className: className,
+            suggest:suggest,
+          }).then(function (res) {
+            console.log("提交建议成功返回",res);
+            alert("提交成功！")
+          }).catch(function (err) {
+            console.log("提交建议失败返回",err)
+          })
+        },
 
       }
     }

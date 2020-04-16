@@ -45,6 +45,10 @@
         },
 
         methods: {
+
+          /***
+           * 登录
+           */
           submitForm() {
             let that=this;
             //let params={...this.ruleFormData};

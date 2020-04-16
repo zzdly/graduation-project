@@ -59,7 +59,6 @@
           <td colspan="5" height="40">
             <div align="center">
               <el-button type="info" @click="submitMail">修改联系方式</el-button>
-              <!--<input type="button" id="button2" value="联系方式有修改" @onclick="submitMail" class="input2" />-->
             </div>
           </td>
         </tr>

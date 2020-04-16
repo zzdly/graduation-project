@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6926ccd3-ea73-4469-8909-b26082d32e5a" name="Default Changelist" comment="" />
+    <list default="true" id="6926ccd3-ea73-4469-8909-b26082d32e5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/controller/PersonalCenterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/controller/PersonalCenterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/mapper/PersonalCenterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/mapper/PersonalCenterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/service/PersonalCenterServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/service/PersonalCenterServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PersonalCenterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PersonalCenterMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/StuInfSys.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/tedu/controller/PersonalCenterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/controller/PersonalCenterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-system-web/src/components/ClassInformation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/components/ClassInformation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-system-web/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/components/Login.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +49,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1YfTmD1MhZXADb0jIWgxiJfPO7K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -51,6 +63,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -148,11 +161,26 @@
       <workItem from="1586789321926" duration="5978000" />
       <workItem from="1586828505399" duration="4208000" />
       <workItem from="1586952554548" duration="5391000" />
+      <workItem from="1587008188382" duration="932000" />
+      <workItem from="1587035433602" duration="1842000" />
+      <workItem from="1587040481362" duration="1995000" />
     </task>
+    <task id="LOCAL-00001" summary="初始化版本">
+      <created>1587008470259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587008470259</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化版本" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="79" key="#Project_Structure" timestamp="1583500573369">
@@ -163,42 +191,46 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="553" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1586960219795" />
+    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1587008468414">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587008468414" />
     <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1586616962176">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1586616962176" />
-    <state width="1493" height="329" key="GridCell.Tab.0.bottom" timestamp="1586966554565">
+    <state width="1493" height="172" key="GridCell.Tab.0.bottom" timestamp="1587042311775">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1586966554565" />
-    <state width="1493" height="329" key="GridCell.Tab.0.center" timestamp="1586966554564">
+    <state width="1493" height="172" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587042311775" />
+    <state width="1493" height="172" key="GridCell.Tab.0.center" timestamp="1587042311775">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1586966554564" />
-    <state width="1493" height="329" key="GridCell.Tab.0.left" timestamp="1586966554564">
+    <state width="1493" height="172" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587042311775" />
+    <state width="1493" height="172" key="GridCell.Tab.0.left" timestamp="1587042311775">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1586966554564" />
-    <state width="1493" height="329" key="GridCell.Tab.0.right" timestamp="1586966554564">
+    <state width="1493" height="172" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587042311775" />
+    <state width="1493" height="172" key="GridCell.Tab.0.right" timestamp="1587042311775">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1586966554564" />
-    <state width="1493" height="329" key="GridCell.Tab.1.bottom" timestamp="1586966554565">
+    <state width="1493" height="172" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587042311775" />
+    <state width="1493" height="172" key="GridCell.Tab.1.bottom" timestamp="1587042311776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1586966554565" />
-    <state width="1493" height="329" key="GridCell.Tab.1.center" timestamp="1586966554565">
+    <state width="1493" height="172" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587042311776" />
+    <state width="1493" height="172" key="GridCell.Tab.1.center" timestamp="1587042311775">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1586966554565" />
-    <state width="1493" height="329" key="GridCell.Tab.1.left" timestamp="1586966554565">
+    <state width="1493" height="172" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1587042311775" />
+    <state width="1493" height="172" key="GridCell.Tab.1.left" timestamp="1587042311775">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1586966554565" />
-    <state width="1493" height="329" key="GridCell.Tab.1.right" timestamp="1586966554565">
+    <state width="1493" height="172" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1587042311775" />
+    <state width="1493" height="172" key="GridCell.Tab.1.right" timestamp="1587042311775">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1586966554565" />
+    <state width="1493" height="172" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1587042311775" />
     <state width="1493" height="355" key="GridCell.Tab.2.bottom" timestamp="1585486668817">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -219,6 +251,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="498" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1583405483222" />
+    <state x="337" y="134" key="Vcs.Push.Dialog.v2" timestamp="1587008479306">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="337" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587008479306" />
     <state x="315" y="89" key="new project wizard" timestamp="1586431128820">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

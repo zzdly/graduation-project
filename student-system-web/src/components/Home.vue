@@ -10,7 +10,7 @@
             <template slot="title"><i class="el-icon-message"></i>个人中心</template>
               <el-menu-item index="/personalCenter">基本信息</el-menu-item>
               <el-menu-item index="/classInformation">班级信息</el-menu-item>
-              <el-menu-item index="1-2">密码修改</el-menu-item>
+              <el-menu-item index="/changePassword">密码修改</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title"><i class="el-icon-menu"></i>成绩中心</template>

@@ -31,6 +31,11 @@ export default new Router({
           name:'classInformation',
           component:()=>import('../components/ClassInformation')
         },
+        {
+          path:'/changePassword',
+          name:'changePassword',
+          component:()=>import('../components/ChangePassword')
+        },
       ]
 
     }
