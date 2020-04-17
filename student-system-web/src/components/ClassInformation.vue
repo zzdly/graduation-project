@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-left: 15px;margin-top: 15px">
+  <div style="margin-left: 10%;margin-top: 5%">
     <table width="80%" height="500" cellpadding="0" cellspacing="0">
       <tr>
         <td width="10%" align="right">班级名称：</td>

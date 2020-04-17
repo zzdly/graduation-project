@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="personalTable" style="margin-left: 15px;margin-top: 15px">
+    <div class="personalTable" style="margin-left: 10%;margin-top: 5%">
       <table width="80%" height="500" cellpadding="0" cellspacing="0">
         <tr>
           <td align="right" width="10%">姓名：</td>

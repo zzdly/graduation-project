@@ -1,19 +1,21 @@
 <template>
-  <div class="app-container common-list-page">
-    <el-form :model="resetForm" :rules="resetFormRules" ref="resetForm" status-icon label-width="100px">
-      <el-form-item label="旧密码：" prop="password">
-        <el-input type="password" v-model="resetForm.password" auto-complete="off"></el-input>
-      </el-form-item>
-      <el-form-item label="新密码：" prop="newpwd">
-        <el-input type="password" v-model="resetForm.newpwd" auto-complete="off"></el-input>
-      </el-form-item>
-      <el-form-item label="确认密码：" prop="newpassword1">
-        <el-input type="password" v-model="resetForm.newpassword1" auto-complete="off"></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="changePassword">确认修改</el-button>
-      </el-form-item>
-    </el-form>
+  <div style="margin-left: 10%;margin-top: 10%">
+    <div class="app-container common-list-page">
+      <el-form :model="resetForm" :rules="resetFormRules" ref="resetForm" status-icon label-width="100px">
+        <el-form-item label="旧密码：" prop="password">
+          <el-input type="password" v-model="resetForm.password" auto-complete="off" style="width: 200px"></el-input>
+        </el-form-item>
+        <el-form-item label="新密码：" prop="newpwd">
+          <el-input type="password" v-model="resetForm.newpwd" auto-complete="off" style="width: 200px"></el-input>
+        </el-form-item>
+        <el-form-item label="确认密码：" prop="newpassword1">
+          <el-input type="password" v-model="resetForm.newpassword1" auto-complete="off" style="width: 200px"></el-input>
+        </el-form-item>
+        <el-form-item style="margin-top: 66px;margin-left: 18%">
+          <el-button type="primary" @click="changePassword">确认修改</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
   </div>
 </template>
 
@@ -41,8 +43,9 @@
         };
         return {
           resetForm: {
-            newpassword1: "",
-            password: "",
+            newpwd:"",//新密码
+            newpassword1: "", //新密码
+            password: "",  //旧密码
           },
           resetFormRules: {
             password: [
@@ -59,7 +62,11 @@
       },
       methods: {
         changePassword() {
-
+          if (this.resetForm.newpassword1!=this.resetForm.newpwd){
+            return false;
+          }else {
+            console.log(this.resetForm.newpassword1,this.resetForm.password);
+          }
         },
       }
     }
@@ -67,11 +74,10 @@
 
 <style scoped>
   .el-form {
-    width: 60%;
-    margin: 50px auto 0;
-    text-align: center;
+    width: 40%;
+    text-align: left;
     button {
-      margin: 20px 0 0;
+      margin: 50px 0 0;
     }
   }
 </style>
