@@ -16,12 +16,12 @@
             <el-submenu index="2">
               <template slot="title"><i class="el-icon-menu"></i>成绩中心</template>
               <el-menu-item index="/scoreQuery">成绩查询</el-menu-item>
-              <el-menu-item index="2-2">绩点查询</el-menu-item>
+              <el-menu-item index="/gardePointAverageQuery">绩点查询</el-menu-item>
             </el-submenu>
             <el-submenu index="3">
               <template slot="title"><i class="el-icon-setting"></i>考试中心</template>
-              <el-menu-item index="3-1">选项1</el-menu-item>
-              <el-menu-item index="3-2">选项2</el-menu-item>
+              <el-menu-item index="3-1">考试列表</el-menu-item>
+              <el-menu-item index="3-2">考试通知</el-menu-item>
             </el-submenu>
           </el-menu> <!--左侧导航栏结束-->
         </el-aside> <!--左侧容器结束-->

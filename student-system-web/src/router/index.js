@@ -36,6 +36,11 @@ export default new Router({
           name:'changePassword',
           component:()=>import('../components/ChangePassword')
         },
+        {
+          path:'/gardePointAverageQuery',
+          name:'gardePointAverageQuery',
+          component:()=>import('../components/gradePointAverageQuery')
+        },
       ]
 
     }

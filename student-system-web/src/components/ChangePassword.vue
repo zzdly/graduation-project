@@ -65,6 +65,8 @@
           if (this.resetForm.newpassword1!=this.resetForm.newpwd){
             return false;
           }else {
+            //发送请求
+
             console.log(this.resetForm.newpassword1,this.resetForm.password);
           }
         },
