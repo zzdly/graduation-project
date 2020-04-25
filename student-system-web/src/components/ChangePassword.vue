@@ -65,7 +65,21 @@
           if (this.resetForm.newpassword1!=this.resetForm.newpwd){
             return false;
           }else {
+            let account=this.$cookie.get('account');
+            let oldPass=this.resetForm.password;
+            let newPass=this.resetForm.newpwd;
             //发送请求
+            this.$axios.post("http://localhost:8889/system/student/updatePassword",{
+              account:account,
+              oldPass:oldPass,
+              newPass:newPass,
+            }).then(function (res) {
+              console.log(res);
+              alert("修改成功");
+            }).catch(function (err) {
+              console.log(err);
+              alert("修改失败");
+            });
 
             console.log(this.resetForm.newpassword1,this.resetForm.password);
           }

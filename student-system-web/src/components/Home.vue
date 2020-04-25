@@ -19,9 +19,10 @@
               <el-menu-item index="/gardePointAverageQuery">绩点查询</el-menu-item>
             </el-submenu>
             <el-submenu index="3">
-              <template slot="title"><i class="el-icon-setting"></i>考试中心</template>
-              <el-menu-item index="3-1">考试列表</el-menu-item>
-              <el-menu-item index="3-2">考试通知</el-menu-item>
+              <template slot="title"><i class="el-icon-setting"></i>通知中心</template>
+              <el-menu-item index="/collegeInform">学院通知</el-menu-item>
+              <el-menu-item index="/classInform">班级通知</el-menu-item>
+              <el-menu-item index="/examInform">考试通知</el-menu-item>
             </el-submenu>
           </el-menu> <!--左侧导航栏结束-->
         </el-aside> <!--左侧容器结束-->

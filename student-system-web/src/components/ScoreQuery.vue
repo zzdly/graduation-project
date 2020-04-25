@@ -1,6 +1,6 @@
 <template>
   <div style="margin-left: 10%;margin-top: 5%">
-    <el-table :data="tableDataList" :default-sort = "{prop: 'date', order: 'descending'}" height="635px"  border style="width: 60%;">
+    <el-table :data="tableDataList" :default-sort = "{prop: 'date', order: 'descending'}" max-height="400px" border style="width: 60%;">
       <el-table-column sortable prop="date" label="学年" style="text-align: center"></el-table-column>
       <el-table-column prop="course" label="课程"></el-table-column>
       <el-table-column prop="score" label="成绩"></el-table-column>
@@ -68,7 +68,74 @@
             {
               date:'1',
               course:'1' ,
-              score:'1'
+              score:'1',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
+            },
+            {
+              date:'2',
+              course:'2' ,
+              score:'2',
+              zzd:'123'
             },
             {
               date:'2',
@@ -83,67 +150,14 @@
             {
               date:'2',
               course:'2' ,
-              score:'2'
+              score:'2',
+              zzd:'123'
             },
             {
               date:'2',
               course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
-            },
-            {
-              date:'2',
-              course:'2' ,
-              score:'2'
+              score:'2',
+              zzd:'123'
             }
           ],
           //对话框显示标志
@@ -168,7 +182,7 @@
          * 初始化及渲染表格
          */
         tableData(){
-          console.log("1123",this.searchParams.date,this.searchParams.course)
+          //console.log("1123",this.searchParams.date,this.searchParams.course)
           this.$axios.post("http://localhost:8889/system/student/scoreQuery",{
             date:this.searchParams.date,
             course:this.searchParams.course,
@@ -186,6 +200,7 @@
         },
         handleClick(row) {
           this.dialogFormVisible=true;
+
           console.log(row);
         }
       }

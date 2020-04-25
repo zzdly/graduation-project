@@ -41,6 +41,21 @@ export default new Router({
           name:'gardePointAverageQuery',
           component:()=>import('../components/gradePointAverageQuery')
         },
+        {
+          path:'/collegeInform',
+          name:'collegeInform',
+          component:()=>import('../components/CollegeInform')
+        },
+        {
+          path:'/classInform',
+          name:'classInform',
+          component:()=>import('../components/ClassInform')
+        },
+        {
+          path:'/examInform',
+          name:'examInform',
+          component:()=>import('../components/ExamInform')
+        },
       ]
 
     }
