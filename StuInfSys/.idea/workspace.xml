@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6926ccd3-ea73-4469-8909-b26082d32e5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/controller/PersonalCenterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/controller/PersonalCenterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/mapper/PersonalCenterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/mapper/PersonalCenterMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/service/PersonalCenterServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/service/PersonalCenterServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PersonalCenterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PersonalCenterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/tedu/controller/PersonalCenterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/controller/PersonalCenterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/tedu/mapper/PersonalCenterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/mapper/PersonalCenterMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/tedu/service/PersonalCenterServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/service/PersonalCenterServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PersonalCenterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/PersonalCenterMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../student-system-web/src/components/ChangePassword.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/components/ChangePassword.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../student-system-web/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../student-system-web/src/components/ScoreQuery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/components/ScoreQuery.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +161,7 @@
       <workItem from="1588428540653" duration="2758000" />
       <workItem from="1588471844429" duration="3396000" />
       <workItem from="1588649946388" duration="6419000" />
+      <workItem from="1588830497676" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="初始化版本">
       <created>1587008470259</created>
@@ -187,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587046925912</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2">
+      <created>1588830761874</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588830761874</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,10 +204,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="553" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1586960219795" />
-    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1587046923026">
+    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1588830758065">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587046923026" />
+    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1588830758065" />
     <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1586616962176">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -267,10 +264,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="498" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1583405483222" />
-    <state x="337" y="134" key="Vcs.Push.Dialog.v2" timestamp="1587046930592">
+    <state x="337" y="134" key="Vcs.Push.Dialog.v2" timestamp="1588830797747">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="337" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587046930592" />
+    <state x="337" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1588830797747" />
     <state x="589" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587816645593">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

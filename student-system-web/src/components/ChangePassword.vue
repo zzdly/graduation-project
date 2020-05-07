@@ -12,7 +12,7 @@
           <el-input type="password" v-model="resetForm.newpassword1" auto-complete="off" style="width: 200px"></el-input>
         </el-form-item>
         <el-form-item style="margin-top: 66px;margin-left: 18%">
-          <el-button type="primary" @click="changePassword">确认修改</el-button>
+          <el-button type="primary" @click="changePassword('resetForm')">确认修改</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -61,28 +61,30 @@
         };
       },
       methods: {
-        changePassword() {
-          if (this.resetForm.newpassword1!=this.resetForm.newpwd){
-            return false;
-          }else {
-            let account=this.$cookie.get('account');
-            let oldPass=this.resetForm.password;
-            let newPass=this.resetForm.newpwd;
-            //发送请求
-            this.$axios.post("http://localhost:8889/system/student/updatePassword",{
-              account:account,
-              oldPass:oldPass,
-              newPass:newPass,
-            }).then(function (res) {
-              console.log(res);
-              alert("修改成功");
-            }).catch(function (err) {
-              console.log(err);
-              alert("修改失败");
-            });
-
-            console.log(this.resetForm.newpassword1,this.resetForm.password);
-          }
+        changePassword(formName) {
+          let that=this;
+          this.$refs[formName].validate((valid) => {
+            if (valid) {
+              let account=this.$cookie.get('account');
+              let role=this.$cookie.get('role');
+              let oldPass=this.resetForm.password;
+              let newPass=this.resetForm.newpwd;
+              //发送请求
+              this.$axios.post("http://localhost:8889/system/student/updatePassword",{
+                account:account,
+                oldPass:oldPass,
+                newPass:newPass,
+                role:role,
+              }).then(function (res) {
+                console.log(res);
+                that.$message.success("修改成功");
+                that.$router.push("/");
+              }).catch(function (err) {
+                console.log(err);
+                that.$message.error("修改失败");
+              });
+            }
+          });
         },
       }
     }
