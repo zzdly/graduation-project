@@ -9,6 +9,14 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <el-dialog title="学院通知" :visible.sync="dialogVisible" width="30%">
+      <span>这是一段信息</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+      </span>
+    </el-dialog>
+
   </div>
 </template>
 
@@ -20,6 +28,7 @@
       data(){
         return{
           tableDataList: [],
+          dialogVisible:false //弹框状态
         }
       },
       created() {
@@ -39,8 +48,8 @@
           })
         },
 
-        handleClick(){
-
+        handleClick(item){
+          this.dialogVisible=true;
         },
 
         dateFormat(row, column, cellValue) {

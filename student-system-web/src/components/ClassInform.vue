@@ -20,6 +20,13 @@
         :total="50">
       </el-pagination>
     </div>
+
+    <el-dialog title="班级通知" :visible.sync="dialogVisible" width="30%">
+      <span>这是一段信息</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -32,6 +39,7 @@
         return{
           currentPage:0,
           tableDataList: [],
+          dialogVisible:false,
         }
       },
 
@@ -53,8 +61,8 @@
           })
         },
 
-        handleClick(){
-
+        handleClick(item){
+          this.dialogVisible=true;
         },
 
         handleSizeChange(val) {

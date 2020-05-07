@@ -3,11 +3,19 @@
     <el-container direction="vertical" style="height: 100%; border: 1px solid #eee;"> <!--最外层容器 margin-top: 0px; margin-bottom: 0px-->
 
       <el-header style="height: 10%;"><!--头部导航栏-->
-        <el-row>
+        <el-row align="middle">
 
-          <el-col :span="12">
-            <div class="grid-content bg-purple" style="text-align: left;margin-top: 3%">
-              123
+          <el-col :span="2">
+            <div class="grid-content bg-purple-light" style="text-align: right;margin-top: 5%;margin-right: 15%">
+              <el-image
+                style="width: 100px; height: 80px;border-radius:4px"
+                src="static/img/img.jpg"
+                fit="fit"></el-image>
+            </div>
+          </el-col>
+          <el-col :span="10" style="text-align: left;margin-top: 2%">
+            <div class="grid-content bg-purple-light">
+              <strong><font size="4">学生信息管理系统（学生端）</font></strong>
             </div>
           </el-col>
 
@@ -18,7 +26,7 @@
                   <i class="el-icon-setting" style="margin-right: 10px"></i>
                   <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item @click.native="updatePass" >修改密码</el-dropdown-item>
-                    <el-dropdown-item>退出</el-dropdown-item>
+                    <el-dropdown-item @click.native="exitLogin">退出</el-dropdown-item>
                   </el-dropdown-menu>
                 </el-dropdown>
                 <span>学号: {{this.account}}</span>
@@ -83,6 +91,10 @@
           updatePass(){
             this.$router.push({path:"/changePassword"})
           },
+
+          exitLogin(){
+
+          }
         },
     }
 </script>
