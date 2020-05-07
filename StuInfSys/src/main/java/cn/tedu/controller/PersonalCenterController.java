@@ -56,4 +56,14 @@ public class PersonalCenterController {
     protected ApiResponse submitSuggest(@RequestBody Map map){
         return personalCenterServer.submitSuggest(map);
     }
+
+    /**
+     * 修改密码
+     * @param map
+     * @return
+     */
+    @PostMapping("/student/updatePassword")
+    public ApiResponse updatePassword(@RequestBody Map map){
+        return personalCenterServer.updatePassword(map);
+    }
 }

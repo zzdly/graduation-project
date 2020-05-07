@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.tedu.mapper.InformMapper">
+    <select id="classInform" resultType="java.util.Map">
+        select * from notification where notificationType=#{notificationType} and
+        promulgator=(select classId from student where studentNumber=#{account})
+    </select>
+
+    <select id="collegeInform" resultType="java.util.Map">
+        select * from notification where notificationType=#{notificationType} and
+        promulgator=(select secondSchool from student where studentNumber=#{account})
+    </select>
+
+    <select id="examInform" resultType="java.util.Map">
+        select * from notification where notificationType=#{notificationType} and
+        promulgator=(select secondSchool from student where studentNumber=#{account})
+    </select>
+</mapper>

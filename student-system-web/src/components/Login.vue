@@ -7,14 +7,14 @@
           <el-form-item label="账号" prop="account">
             <el-input type="text" v-model="ruleFormData.account"></el-input>
           </el-form-item>
-          <el-form-item label="密码" prop="password">
+          <el-form-item label="密码" prop="passWord">
             <el-input type="password" v-model="ruleFormData.passWord"></el-input>
           </el-form-item>
           <el-radio v-model="ruleFormData.radio" label="student">学生</el-radio>
           <el-radio v-model="ruleFormData.radio" label="teacher">教师</el-radio><p/>
         </div>
         <el-form-item class="loginButton">
-          <el-button type="primary" @click="submitForm">登录</el-button>
+          <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -37,7 +37,7 @@
                     account: [
                         {required: true, message: '请输入账号', trigger: 'blur'}
                     ],
-                    pass: [
+                    passWord: [
                         { required: true, message: '请输入密码', trigger: 'blur'}
                     ]
                 }
@@ -45,28 +45,29 @@
         },
 
         methods: {
-
-          /***
-           * 登录
-           */
-          submitForm() {
-            let that=this;
-            //let params={...this.ruleFormData};
-            this.$axios.post('http://localhost:8889/system/student/login',{
-              account:this.ruleFormData.account,
-              passWord:this.ruleFormData.passWord,
-              role:this.ruleFormData.radio
-            }).then(function(res){
-              that.$cookie.set("account",res.data.data[0].account);
-              console.log(res);
-              let role=(res.data.data[0].role);
-              let code=(res.data.code)
-              if (role=="student" && code=="200"){
-                that.$router.push({path:"/personalCenter"});
+          submitForm(ruleForm) {
+            this.$refs[ruleForm].validate((valid) => {
+              if (valid) {
+                let that=this;
+                //let params={...this.ruleFormData};
+                this.$axios.post('http://localhost:8889/system/student/login',{
+                  account:this.ruleFormData.account,
+                  passWord:this.ruleFormData.passWord,
+                  role:this.ruleFormData.radio
+                }).then(function(res){
+                  that.$cookie.set("account",res.data.data[0].account);
+                  that.$cookie.set("role",res.data.data[0].role);
+                  console.log(res);
+                  let role=(res.data.data[0].role);
+                  let code=(res.data.code)
+                  if (role=="student" && code=="200"){
+                    that.$router.push({path:"/personalCenter"});
+                  }
+                }).catch(function (error) {
+                  alert("账号或密码错误！")
+                  console.log(error);
+                });
               }
-            }).catch(function (error) {
-              alert("账号或密码错误！")
-              console.log(error);
             });
           }
         }

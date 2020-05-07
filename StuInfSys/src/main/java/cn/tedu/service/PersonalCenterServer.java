@@ -3,6 +3,7 @@ package cn.tedu.service;
 import cn.tedu.api.ApiResponse;
 import cn.tedu.domain.ClassAndGrade;
 import cn.tedu.domain.Student;
+import cn.tedu.domain.User;
 import cn.tedu.mapper.PersonalCenterMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,5 +56,21 @@ public class PersonalCenterServer {
     public ApiResponse submitSuggest(Map map) {
         personalCenterMapper.submitSuggest(map);
         return ApiResponse.buildSuccessMessage("提交成功");
+    }
+
+    /**
+     * 修改密码
+     * @param map
+     * @return
+     */
+    public ApiResponse updatePassword(Map map) {
+        //查询账号密码是否正确
+        User user =personalCenterMapper.checkAccount(map);
+        if (user!=null){
+            personalCenterMapper.updatePassword(map);
+            return ApiResponse.buildSuccessMessage("密码修改成功");
+        }else {
+            return ApiResponse.buildErrorMessage("密码修改失败");
+        }
     }
 }

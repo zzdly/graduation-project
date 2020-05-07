@@ -29,4 +29,14 @@
     <insert id="submitSuggest">
         insert into suggest values (#{className},#{suggest})
     </insert>
+
+    <!--查看账号是否正确-->
+    <select id="checkAccount" resultType="cn.tedu.domain.User">
+        select * from user where account=#{account} and passWord=#{oldPass} and role=#{role}
+    </select>
+
+    <!--修改密码-->
+    <update id="updatePassword">
+        update user set passWord=#{newPass} where account=#{account} and role=#{role}
+    </update>
 </mapper>

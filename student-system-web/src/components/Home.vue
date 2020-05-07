@@ -2,7 +2,35 @@
   <div class="homeBox">
     <el-container direction="vertical" style="height: 100%; border: 1px solid #eee;"> <!--最外层容器 margin-top: 0px; margin-bottom: 0px-->
 
-      <el-header style="height: 10%">Header</el-header> <!--头部导航栏-->
+      <el-header style="height: 10%;"><!--头部导航栏-->
+        <el-row>
+
+          <el-col :span="12">
+            <div class="grid-content bg-purple" style="text-align: left;margin-top: 3%">
+              123
+            </div>
+          </el-col>
+
+          <el-col :span="12">
+            <div class="grid-content bg-purple-light" style="text-align: right;margin-top: 2%">
+              <span>
+                <el-dropdown size="medium" style="margin-top: 2%;">
+                  <i class="el-icon-setting" style="margin-right: 10px"></i>
+                  <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item @click.native="updatePass" >修改密码</el-dropdown-item>
+                    <el-dropdown-item>退出</el-dropdown-item>
+                  </el-dropdown-menu>
+                </el-dropdown>
+                <span>学号: {{this.account}}</span>
+              </span>
+            </div>
+          </el-col>
+        </el-row>
+
+
+
+
+      </el-header>
 
       <el-container style="height: auto"> <!--第二层外部容器-->
         <el-aside width="15%" >  <!--左侧容器-->
@@ -41,11 +69,39 @@
 
 <script>
     export default {
-        name: "Home"
+        name: "Home",
+        data(){
+          return{
+            account:''
+          }
+        },
+
+        created() {
+            this.account='16101010513'
+        },
+        methods:{
+          updatePass(){
+            this.$router.push({path:"/changePassword"})
+          },
+        },
     }
 </script>
 
 <style scoped>
+
+  .user-avator {
+    margin-right: 20px;
+
+  }
+  .user-avator img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
 
   .el-header, .el-footer {
     background-color: #B3C0D1;

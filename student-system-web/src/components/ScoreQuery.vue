@@ -1,9 +1,9 @@
 <template>
   <div style="margin-left: 10%;margin-top: 5%">
-    <el-table :data="tableDataList" :default-sort = "{prop: 'date', order: 'descending'}" max-height="400px" border style="width: 60%;">
-      <el-table-column sortable prop="date" label="学年" style="text-align: center"></el-table-column>
-      <el-table-column prop="course" label="课程"></el-table-column>
-      <el-table-column prop="score" label="成绩"></el-table-column>
+    <el-table :data="tableDataList" :default-sort = "{prop: 'schoolYear', order: 'descending'}" max-height="400px" border style="width: 60%;">
+      <el-table-column sortable prop="schoolYear" label="学年" style="text-align: center"></el-table-column>
+      <el-table-column prop="subject" label="课程"></el-table-column>
+      <el-table-column prop="finalScore" label="成绩"></el-table-column>
       <el-table-column fixed="right" label="操作">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" type="text" size="small">详情</el-button>
@@ -26,24 +26,24 @@
 
     <el-dialog title="详细信息" :visible.sync="dialogFormVisible" width="350px">
       <div>
-        <el-form :model="scoreDetailsForm" inline style="text-align: right">
-          <el-form-item label="平时占比" :label-width="100">
-            <el-input v-model="scoreDetailsForm.peacetimeRatio" autocomplete="off" disabled></el-input>
+        <el-form :model="scoreDetailsForm" inline >
+          <el-form-item label="平时占比" label-width="70px">
+            <el-input v-model="scoreDetailsForm.usualRatio" autocomplete="off" readonly></el-input>
           </el-form-item>
-          <el-form-item label="平时成绩" :label-width="100">
-            <el-input v-model="scoreDetailsForm.peacetimeScore" autocomplete="off" disabled></el-input>
+          <el-form-item label="平时成绩" label-width="70px">
+            <el-input v-model="scoreDetailsForm.usualPerformance" autocomplete="off" readonly></el-input>
           </el-form-item>
-          <el-form-item label="考试占比" :label-width="100">
-            <el-input v-model="scoreDetailsForm.examRatio" autocomplete="off" disabled></el-input>
+          <el-form-item label="考试占比" label-width="70px">
+            <el-input v-model="scoreDetailsForm.examRatio" autocomplete="off" readonly></el-input>
           </el-form-item>
-          <el-form-item label="考试成绩" :label-width="100">
-            <el-input v-model="scoreDetailsForm.examScore" autocomplete="off" disabled></el-input>
+          <el-form-item label="考试成绩" label-width="70px">
+            <el-input v-model="scoreDetailsForm.examPerformance" autocomplete="off" readonly></el-input>
           </el-form-item>
-          <el-form-item label="最终成绩" :label-width="100">
-            <el-input v-model="scoreDetailsForm.finalScore" autocomplete="off" disabled></el-input>
+          <el-form-item label="最终成绩" label-width="70px">
+            <el-input v-model="scoreDetailsForm.finalScore" autocomplete="off" readonly></el-input>
           </el-form-item>
-          <el-form-item label="绩点" :label-width="100">
-            <el-input v-model="scoreDetailsForm.gradePointAverage" autocomplete="off" disabled></el-input>
+          <el-form-item label="绩点" label-width="70px">
+            <el-input v-model="scoreDetailsForm.gradePointAverage" autocomplete="off" readonly></el-input>
           </el-form-item>
         </el-form>
       </div>
@@ -164,10 +164,10 @@
           dialogFormVisible: false,
           //对话框数据
           scoreDetailsForm: {
-            peacetimeRatio:'',//平时比例
-            peacetimeScore:'',//平时成绩
+            usualRatio:'',//平时比例
+            usualPerformance:'',//平时成绩
             examRatio:'',//考试比例
-            examScore:'',//考试成绩
+            examPerformance:'',//考试成绩
             finalScore:'',//最终成绩
             gradePointAverage:''//绩点
           },
@@ -182,12 +182,16 @@
          * 初始化及渲染表格
          */
         tableData(){
-          //console.log("1123",this.searchParams.date,this.searchParams.course)
+          let that=this;
+          let account=this.$cookie.get('account');
+          let params={};
+          params=this.searchParams;
+          params.account=account;
           this.$axios.post("http://localhost:8889/system/student/scoreQuery",{
-            date:this.searchParams.date,
-            course:this.searchParams.course,
+            params:params,
           }).then(function (res) {
             console.log("成绩搜索返回成功数据：",res);
+            that.tableDataList=res.data.data;
           }).catch(function (err) {
             console.log("成绩搜索失败返回数据",err);
           })
@@ -200,7 +204,7 @@
         },
         handleClick(row) {
           this.dialogFormVisible=true;
-
+          this.scoreDetailsForm=row;
           console.log(row);
         }
       }
