@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6926ccd3-ea73-4469-8909-b26082d32e5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../student-system-web/src/components/ChangePassword.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/components/ChangePassword.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +161,8 @@
       <workItem from="1588428540653" duration="2758000" />
       <workItem from="1588471844429" duration="3396000" />
       <workItem from="1588649946388" duration="6419000" />
-      <workItem from="1588830497676" duration="333000" />
+      <workItem from="1588830497676" duration="820000" />
+      <workItem from="1588856892687" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="初始化版本">
       <created>1587008470259</created>

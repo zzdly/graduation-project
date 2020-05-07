@@ -15,6 +15,12 @@ Vue.prototype.$axios = axios;
 import moment from 'moment'//日期格式转换工具
 Vue.prototype.$moment = moment;
 
+import VueQuillEditor from 'vue-quill-editor'
+// require styles 引入样式
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+Vue.use(VueQuillEditor)
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
