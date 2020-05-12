@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6926ccd3-ea73-4469-8909-b26082d32e5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/api/Md5Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../student-system-web/src/components/TeacherHome.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../student-system-web/static/img/bg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/service/LoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/service/LoginServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ScoreMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/tedu/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/tedu/service/LoginServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/service/LoginServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-system-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-system-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-system-web/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-system-web/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/components/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-system-web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../student-system-web/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -163,6 +176,7 @@
       <workItem from="1588649946388" duration="6419000" />
       <workItem from="1588830497676" duration="820000" />
       <workItem from="1588856892687" duration="791000" />
+      <workItem from="1589290246770" duration="3473000" />
     </task>
     <task id="LOCAL-00001" summary="初始化版本">
       <created>1587008470259</created>
@@ -213,38 +227,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1586616962176" />
-    <state width="1493" height="173" key="GridCell.Tab.0.bottom" timestamp="1588659520938">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1589296439253">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1588659520938" />
-    <state width="1493" height="173" key="GridCell.Tab.0.center" timestamp="1588659520938">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1589296439253" />
+    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1589296439253">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1588659520938" />
-    <state width="1493" height="173" key="GridCell.Tab.0.left" timestamp="1588659520938">
+    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1589296439253" />
+    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1589296439253">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1588659520938" />
-    <state width="1493" height="173" key="GridCell.Tab.0.right" timestamp="1588659520938">
+    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1589296439253" />
+    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1589296439253">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1588659520938" />
-    <state width="1493" height="173" key="GridCell.Tab.1.bottom" timestamp="1588659520939">
+    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1589296439253" />
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1589296439253">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1588659520939" />
-    <state width="1493" height="173" key="GridCell.Tab.1.center" timestamp="1588659520938">
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1589296439253" />
+    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1589296439253">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1588659520938" />
-    <state width="1493" height="173" key="GridCell.Tab.1.left" timestamp="1588659520938">
+    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1589296439253" />
+    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1589296439253">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1588659520938" />
-    <state width="1493" height="173" key="GridCell.Tab.1.right" timestamp="1588659520939">
+    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1589296439253" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1589296439253">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1588659520939" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1589296439253" />
     <state width="1493" height="355" key="GridCell.Tab.2.bottom" timestamp="1585486668817">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

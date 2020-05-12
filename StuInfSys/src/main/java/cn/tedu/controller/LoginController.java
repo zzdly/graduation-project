@@ -1,6 +1,7 @@
 package cn.tedu.controller;
 
 import cn.tedu.api.ApiResponse;
+import cn.tedu.api.Md5Utils;
 import cn.tedu.domain.User;
 import cn.tedu.service.LoginServer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,8 @@ public class LoginController {
 
     @PostMapping("/student/login")
     public ApiResponse userLogin(@RequestBody Map map){
-        //System.out.println(map.toString());
+        String passWord=Md5Utils.getMd5Code((String) map.get("passWord"));
+        map.put("passWord",passWord);
         return loginServer.login(map);
     }
     

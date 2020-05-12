@@ -15,7 +15,7 @@
           </el-col>
           <el-col :span="10" style="text-align: left;margin-top: 2%">
             <div class="grid-content bg-purple-light">
-              <strong><font size="4">学生信息管理系统（学生端）</font></strong>
+              <strong><font size="4">学生信息管理系统（教师端）</font></strong>
             </div>
           </el-col>
 
@@ -29,37 +29,19 @@
                     <el-dropdown-item @click.native="exitLogin">退出</el-dropdown-item>
                   </el-dropdown-menu>
                 </el-dropdown>
-                <span>学号: {{this.account}}</span>
+                <span>账号: {{this.account}}</span>
               </span>
             </div>
           </el-col>
         </el-row>
-
-
-
-
       </el-header>
 
       <el-container style="height: auto"> <!--第二层外部容器-->
         <el-aside width="15%" >  <!--左侧容器-->
           <el-menu  style="background-color: #D3DCE6" router><!--左侧导航栏--><!--:default-openeds="['1']"-->
-            <el-submenu index="1">
-              <template slot="title"><i class="el-icon-message"></i>个人中心</template>
-              <el-menu-item index="/personalCenter">基本信息</el-menu-item>
-              <el-menu-item index="/classInformation">班级信息</el-menu-item>
-              <el-menu-item index="/changePassword">密码修改</el-menu-item>
-            </el-submenu>
-            <el-submenu index="2">
-              <template slot="title"><i class="el-icon-menu"></i>成绩中心</template>
-              <el-menu-item index="/scoreQuery">成绩查询</el-menu-item>
-              <el-menu-item index="/gardePointAverageQuery">绩点查询</el-menu-item>
-            </el-submenu>
-            <el-submenu index="3">
-              <template slot="title"><i class="el-icon-setting"></i>通知中心</template>
-              <el-menu-item index="/collegeInform">学院通知</el-menu-item>
-              <el-menu-item index="/classInform">班级通知</el-menu-item>
-              <el-menu-item index="/examInform">考试通知</el-menu-item>
-            </el-submenu>
+            <el-menu-item index="">基本信息</el-menu-item>
+            <el-menu-item index="">成绩管理</el-menu-item>
+            <el-menu-item index="">通知管理</el-menu-item>
           </el-menu> <!--左侧导航栏结束-->
         </el-aside> <!--左侧容器结束-->
 
@@ -77,27 +59,25 @@
 
 <script>
     export default {
-        name: "Home",
+        name: "TeacherHome",
         data(){
           return{
             account:''
           }
         },
-
         created() {
-            this.account=this.$cookie.get("account");
+          this.account=this.$cookie.get("account");
         },
         methods:{
           updatePass(){
-            this.$router.push({path:"/changePassword"});
+            //this.$router.push({path:"/changePassword"})
           },
-
           exitLogin(){
             this.$cookie.set("account","");
             this.$cookie.set("role","");
             this.$router.push({path:"/"});
           },
-        },
+        }
     }
 </script>
 

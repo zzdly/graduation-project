@@ -10,6 +10,11 @@ Router.prototype.push = function push(location) {
 export default new Router({
   routes: [
     {
+      path:'/test',
+      name:'test',
+      component:()=>import('../components/test')
+    },
+    {
       path: '/',
       name: 'Login',
       component:()=>import('../components/Login'),
@@ -60,7 +65,14 @@ export default new Router({
           component:()=>import('../components/ExamInform')
         },
       ]
+    },
+    {
+      path:'/teacherHome',
+      name:'teacherHome',
+      component:()=>import('../components/TeacherHome'),
+      children:[
 
+      ]
     }
   ]
 })

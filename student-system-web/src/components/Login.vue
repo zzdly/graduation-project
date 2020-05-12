@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="Login">
-      <font size="20" color="black"><p align="center">系统登录</p></font>
+      <font size="7" color="black"><p align="center">系统登录</p></font>
       <el-form :model="ruleFormData" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
         <div class="formDiv">
           <el-form-item label="账号" prop="account">
@@ -40,7 +40,7 @@
                     passWord: [
                         { required: true, message: '请输入密码', trigger: 'blur'}
                     ]
-                }
+                },
             }
         },
 
@@ -62,9 +62,11 @@
                   let code=(res.data.code)
                   if (role=="student" && code=="200"){
                     that.$router.push({path:"/personalCenter"});
+                  }else if (role="teacher") {
+                    that.$router.push({path:"/teacherHome"})
                   }
                 }).catch(function (error) {
-                  alert("账号或密码错误！")
+                  that.$message.error("账号或密码错误！");
                   console.log(error);
                 });
               }
